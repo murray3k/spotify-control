@@ -13,13 +13,13 @@ then
 fi
 
 case $1 in
-    "play")
+    "play"|"pause")
         dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
         ;;
-    "next")
+    "next"|"n")
         dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
         ;;
-    "prev")
+    "prev"|"p")
         dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
         ;;
     "getTitle")
